@@ -1,0 +1,69 @@
+// Box-Sizing
+*,
+*:before,
+*:after {
+  @include box-sizing(border-box);
+}
+
+
+// Typography
+body,
+.page-wrapper {
+  @include font-size(16);
+  font-family: sans-serif;
+  line-height: 1.4;
+}
+.page-wrapper {
+  padding: 0 1em;
+}
+
+
+// Links
+a {
+  // Applies to all link states, including visited and links without an href attribute
+  text-decoration: none;
+
+  // Does not apply to visited links or links without an href attribute
+  &:link {
+    color: red;
+  }
+
+  // Only applies to visited links
+  &:visited {
+    color: lighten(red, 10%);
+  }
+
+  &:focus,
+  &:hover {
+    color: darken(red, 20%);
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: red;
+    text-decoration: underline;
+  }
+}
+
+
+// Layout
+.container {
+  padding: 0 1em;
+}
+
+
+// Allow only vertical resizing of textareas.
+textarea {
+  resize: vertical;
+}
+
+
+// Remove text-shadow, customize the background
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
