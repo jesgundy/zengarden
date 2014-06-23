@@ -7,54 +7,51 @@
 
 
 // Typography
-body,
-.page-wrapper {
-  @include font-size(16);
-  font-family: sans-serif;
-  line-height: 1.4;
+body {
+  background: $dark-green;
+  color: $beige;
+  font-family: $sans;
+  font-weight: 300;
+  line-height: 1.5;
 }
 .page-wrapper {
+  @include font-size(16);
   padding: 0 1em;
 }
 
 
 // Links
 a {
-  // Applies to all link states, including visited and links without an href attribute
   text-decoration: none;
 
-  // Does not apply to visited links or links without an href attribute
   &:link {
-    color: red;
+    color: $orange;
   }
 
-  // Only applies to visited links
   &:visited {
-    color: lighten(red, 10%);
+    color: lighten($orange, 10%);
   }
 
   &:focus,
-  &:hover {
-    color: darken(red, 20%);
-    text-decoration: underline;
-  }
-
+  &:hover,
   &:active {
-    color: red;
-    text-decoration: underline;
+    color: $orange;
+    border-bottom: 1px solid $orange;
   }
+}
+
+
+// headings
+h1,
+h2,
+h3 {
+  font-weight: 600;
 }
 
 
 // Layout
 .container {
-  padding: 0 1em;
-}
-
-
-// Allow only vertical resizing of textareas.
-textarea {
-  resize: vertical;
+  padding: 0 1em 0 3em;
 }
 
 

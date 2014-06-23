@@ -4,6 +4,7 @@
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,600");
 html {
   font-family: sans-serif;
   /* 1 */
@@ -357,11 +358,6 @@ th {
 html {
   font-size: 62.5%; }
 
-body,
-.container {
-  font-size: 14px;
-  font-size: 1.4rem; }
-
 *,
 *:before,
 *:after {
@@ -369,34 +365,35 @@ body,
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-body,
+body {
+  background: #2a2c2b;
+  color: #d9cb9e;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.5; }
+
 .page-wrapper {
   font-size: 16px;
   font-size: 1.6rem;
-  font-family: sans-serif;
-  line-height: 1.4; }
-
-.page-wrapper {
   padding: 0 1em; }
 
 a {
   text-decoration: none; }
   a:link {
-    color: red; }
+    color: #dc3522; }
   a:visited {
-    color: #ff3333; }
-  a:focus, a:hover {
-    color: #990000;
-    text-decoration: underline; }
-  a:active {
-    color: red;
-    text-decoration: underline; }
+    color: #e45d4d; }
+  a:focus, a:hover, a:active {
+    color: #dc3522;
+    border-bottom: 1px solid #dc3522; }
+
+h1,
+h2,
+h3 {
+  font-weight: 600; }
 
 .container {
-  padding: 0 1em; }
-
-textarea {
-  resize: vertical; }
+  padding: 0 1em 0 3em; }
 
 ::-moz-selection {
   background: #b3d4fc;
