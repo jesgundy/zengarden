@@ -366,7 +366,7 @@ html {
 
 body {
   background: white;
-  color: #333333;
+  color: black;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
   line-height: 1.618; }
@@ -382,16 +382,19 @@ body {
 
 a {
   text-decoration: none; }
-  a:link {
-    border-bottom: 1px solid #333333;
-    color: #333333; }
-  a:visited {
-    color: #4d4d4d; }
+  a:link, a:visited {
+    border-bottom: 1px solid black;
+    color: black;
+    padding: 0 0.15em; }
   a:focus, a:hover, a:active {
-    color: #333333;
-    border-bottom: 1px solid #333333; }
+    background: #aeee00; }
+  a:visited:hover {
+    background: #e3f8a9; }
   a .indicator {
     display: none; }
+
+abbr[title] {
+  cursor: help; }
 
 h1,
 h2,
@@ -399,29 +402,26 @@ h3 {
   font-weight: bold;
   margin: 1.618em 0 1em;
   line-height: 1; }
-  h1 [title],
-  h2 [title],
-  h3 [title] {
-    border-bottom: none; }
 
 h1 {
-  font-size: 67.77282px;
-  font-size: 6.77728rem; }
-
-h2 {
   font-size: 41.88678px;
   font-size: 4.18868rem; }
 
-h3 {
+h2 {
   font-size: 25.888px;
   font-size: 2.5888rem; }
 
+h3 {
+  font-size: 16px;
+  font-size: 1.6rem;
+  text-transform: uppercase; }
+
 ::-moz-selection {
-  background: rgba(51, 51, 51, 0.5);
+  background: rgba(0, 0, 0, 0.5);
   text-shadow: none; }
 
 ::selection {
-  background: rgba(51, 51, 51, 0.5);
+  background: rgba(0, 0, 0, 0.5);
   text-shadow: none; }
 
 @media print {

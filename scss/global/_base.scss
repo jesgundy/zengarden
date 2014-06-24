@@ -28,25 +28,32 @@ body {
 a {
   text-decoration: none;
 
-  &:link {
+  &:link,
+  &:visited {
     border-bottom: 1px solid $black;
     color: $black;
-  }
-
-  &:visited {
-    color: lighten($black, 10%);
+    padding: 0 0.15em;
   }
 
   &:focus,
   &:hover,
   &:active {
-    color: $black;
-    border-bottom: 1px solid $black;
+    background: $accent;
+  }
+
+  &:visited:hover {
+    background: $accent-alt;
   }
 
   .indicator {
     display: none;
   }
+}
+
+
+// temporary title replacement
+abbr[title] {
+  cursor: help;
 }
 
 
@@ -57,20 +64,16 @@ h3 {
   font-weight: bold;
   margin: golden-ratio(1em, 1) 0 1em;
   line-height: 1;
-  // text-transform: uppercase;
-
-  [title] {
-    border-bottom: none;
-  }
 }
 h1 {
-  @include font-size( $fs-x3 );
-}
-h2 {
   @include font-size( $fs-x2 );
 }
-h3 {
+h2 {
   @include font-size( $fs-x1 );
+}
+h3 {
+  @include font-size( $fs-base );
+  text-transform: uppercase;
 }
 
 
