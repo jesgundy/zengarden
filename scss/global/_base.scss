@@ -15,7 +15,7 @@ body {
   line-height: golden-ratio(1,  1);;
 }
 .page-wrapper {
-  @include font-size(15);
+  @include font-size( $fs-base );
   margin: 0 auto;
   padding: 1px 1em;
   @include mq-min($medium) {
@@ -55,13 +55,22 @@ h1,
 h2,
 h3 {
   font-weight: bold;
-  margin: golden-ratio(1.5em, 1) 0 1.5em;
-  line-height: 1.2;
-  text-transform: uppercase;
+  margin: golden-ratio(1em, 1) 0 1em;
+  line-height: 1;
+  // text-transform: uppercase;
 
   [title] {
     border-bottom: none;
   }
+}
+h1 {
+  @include font-size( $fs-x3 );
+}
+h2 {
+  @include font-size( $fs-x2 );
+}
+h3 {
+  @include font-size( $fs-x1 );
 }
 
 

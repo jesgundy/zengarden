@@ -372,8 +372,8 @@ body {
   line-height: 1.618; }
 
 .page-wrapper {
-  font-size: 15px;
-  font-size: 1.5rem;
+  font-size: 16px;
+  font-size: 1.6rem;
   margin: 0 auto;
   padding: 1px 1em; }
   @media screen and (min-width: 48em) {
@@ -397,13 +397,24 @@ h1,
 h2,
 h3 {
   font-weight: bold;
-  margin: 2.427em 0 1.5em;
-  line-height: 1.2;
-  text-transform: uppercase; }
+  margin: 1.618em 0 1em;
+  line-height: 1; }
   h1 [title],
   h2 [title],
   h3 [title] {
     border-bottom: none; }
+
+h1 {
+  font-size: 67.77282px;
+  font-size: 6.77728rem; }
+
+h2 {
+  font-size: 41.88678px;
+  font-size: 4.18868rem; }
+
+h3 {
+  font-size: 25.888px;
+  font-size: 2.5888rem; }
 
 ::-moz-selection {
   background: rgba(51, 51, 51, 0.5);

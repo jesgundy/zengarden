@@ -2,6 +2,13 @@
 $sans: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 
 
+// Font sizes
+$fs-base: 16;
+$fs-x1: golden-ratio( 16, 1 );
+$fs-x2: golden-ratio( $fs-x1, 1 );
+$fs-x3: golden-ratio( $fs-x2, 1 );
+
+
 // Colors
 $white: #fff;
 $black: #333;
