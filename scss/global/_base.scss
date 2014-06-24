@@ -8,15 +8,19 @@
 
 // Typography
 body {
-  background: $dark-green;
-  color: $beige;
+  background: $white;
+  color: $black;
   font-family: $sans;
   font-weight: 300;
-  line-height: 1.5;
+  line-height: golden-ratio(1,  1);;
 }
 .page-wrapper {
-  @include font-size(16);
-  padding: 0 1em;
+  @include font-size(15);
+  margin: 0 auto;
+  padding: 1px 1em;
+  @include mq-min($medium) {
+    width: golden-ratio(100%, -1);
+  }
 }
 
 
@@ -25,18 +29,23 @@ a {
   text-decoration: none;
 
   &:link {
-    color: $orange;
+    border-bottom: 1px solid $black;
+    color: $black;
   }
 
   &:visited {
-    color: lighten($orange, 10%);
+    color: lighten($black, 10%);
   }
 
   &:focus,
   &:hover,
   &:active {
-    color: $orange;
-    border-bottom: 1px solid $orange;
+    color: $black;
+    border-bottom: 1px solid $black;
+  }
+
+  .indicator {
+    display: none;
   }
 }
 
@@ -45,22 +54,40 @@ a {
 h1,
 h2,
 h3 {
-  font-weight: 600;
+  font-weight: bold;
+  margin: golden-ratio(1.5em, 1) 0 1.5em;
+  line-height: 1.2;
+  text-transform: uppercase;
+
+  [title] {
+    border-bottom: none;
+  }
 }
 
 
-// Layout
-.container {
-  padding: 0 1em 0 3em;
+// paragraph
+p {
+
+}
+
+
+// primary components
+.summary,
+.preamble,
+.explanation,
+.participation,
+.benefits,
+.requirements {
+
 }
 
 
 // Remove text-shadow, customize the background
 ::-moz-selection {
-  background: #b3d4fc;
+  background: transparentize($black, 0.5);
   text-shadow: none;
 }
 ::selection {
-  background: #b3d4fc;
+  background: transparentize($black, 0.5);
   text-shadow: none;
 }

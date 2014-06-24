@@ -4,7 +4,6 @@
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,600");
 html {
   font-family: sans-serif;
   /* 1 */
@@ -366,41 +365,52 @@ html {
   box-sizing: border-box; }
 
 body {
-  background: #2a2c2b;
-  color: #d9cb9e;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: white;
+  color: #333333;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
-  line-height: 1.5; }
+  line-height: 1.618; }
 
 .page-wrapper {
-  font-size: 16px;
-  font-size: 1.6rem;
-  padding: 0 1em; }
+  font-size: 15px;
+  font-size: 1.5rem;
+  margin: 0 auto;
+  padding: 1px 1em; }
+  @media screen and (min-width: 48em) {
+    .page-wrapper {
+      width: 61.8047%; } }
 
 a {
   text-decoration: none; }
   a:link {
-    color: #dc3522; }
+    border-bottom: 1px solid #333333;
+    color: #333333; }
   a:visited {
-    color: #e45d4d; }
+    color: #4d4d4d; }
   a:focus, a:hover, a:active {
-    color: #dc3522;
-    border-bottom: 1px solid #dc3522; }
+    color: #333333;
+    border-bottom: 1px solid #333333; }
+  a .indicator {
+    display: none; }
 
 h1,
 h2,
 h3 {
-  font-weight: 600; }
-
-.container {
-  padding: 0 1em 0 3em; }
+  font-weight: bold;
+  margin: 2.427em 0 1.5em;
+  line-height: 1.2;
+  text-transform: uppercase; }
+  h1 [title],
+  h2 [title],
+  h3 [title] {
+    border-bottom: none; }
 
 ::-moz-selection {
-  background: #b3d4fc;
+  background: rgba(51, 51, 51, 0.5);
   text-shadow: none; }
 
 ::selection {
-  background: #b3d4fc;
+  background: rgba(51, 51, 51, 0.5);
   text-shadow: none; }
 
 @media print {

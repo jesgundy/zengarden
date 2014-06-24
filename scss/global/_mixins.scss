@@ -1,14 +1,16 @@
-// Fonts
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,600");
-$sans: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+// Font Stack
+$sans: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 
 
 // Colors
-$orange: #dc3522;
-$beige: #d9cb9e;
-$green: #374140;
-$dark-green: #2a2c2b;
-$black: #1e1e20;
+$white: #fff;
+$black: #333;
+
+
+// Breakpoint Variables
+$small: 21em; // includes iPhone portrait
+$medium: 48em; // includes iPad portrait
+$large: 64em; // includes iPad landscape
 
 
 // Media Query Mixins (http://jakearchibald.github.io/sass-ie/)
