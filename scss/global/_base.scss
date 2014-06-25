@@ -32,17 +32,12 @@ a {
   &:visited {
     border-bottom: 1px solid $black;
     color: $black;
-    padding: 0 0.15em;
   }
 
   &:focus,
   &:hover,
   &:active {
-    background: $accent;
-  }
-
-  &:visited:hover {
-    background: $accent-alt;
+    border-bottom: 3px double $black;
   }
 
   .indicator {
@@ -53,6 +48,7 @@ a {
 
 // temporary title replacement
 abbr[title] {
+  border: inherit;
   cursor: help;
 }
 
