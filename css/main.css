@@ -362,15 +362,15 @@ html {
 *:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  overflow: auto; }
+  box-sizing: border-box; }
 
 body {
   background: white;
   color: #333333;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
-  line-height: 1.618; }
+  line-height: 1.618;
+  text-rendering: optimizeLegibility; }
 
 .page-wrapper {
   font-size: 16px;
@@ -401,12 +401,15 @@ h2,
 h3 {
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: bold;
-  margin: 1.618em 0 1em;
+  margin: 2.61792em 0 1em;
   line-height: 1; }
 
 h1 {
   font-size: 41.88678px;
-  font-size: 4.18868rem; }
+  font-size: 4.18868rem;
+  margin: 1em 0 0;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300; }
 
 h2 {
   font-size: 25.888px;
