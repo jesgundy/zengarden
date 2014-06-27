@@ -380,7 +380,7 @@ body {
   @media screen and (min-width: 48em) {
     .page-wrapper {
       width: 61.8047%;
-      margin: 0 0 0 14.58992%; } }
+      margin: 6.472em 0 4em 14.58992%; } }
 
 a {
   text-decoration: none; }
@@ -433,6 +433,16 @@ footer {
   footer:before {
     content: "Utility Links:";
     display: block; }
+  @media screen and (min-width: 48em) {
+    footer {
+      font-size: 17px;
+      font-size: 1.7rem;
+      left: 0;
+      margin-top: 6.472em;
+      position: fixed;
+      top: 0; }
+      footer:before {
+        display: none; } }
   footer a {
     border: 1px solid #333333;
     cursor: help;
@@ -451,6 +461,19 @@ footer {
       content: " (FAQ)"; }
     footer a.zen-github:before {
       content: "Fork via "; }
+    @media screen and (min-width: 48em) {
+      footer a {
+        -webkit-transition: left 0.25s ease;
+        -moz-transition: left 0.25s ease;
+        transition: left 0.25s ease;
+        display: block;
+        padding-left: 1.5em;
+        position: relative;
+        left: -1em; }
+        footer a:before, footer a:after {
+          display: none; }
+        footer a:focus, footer a:hover, footer a:active {
+          left: -0.5em; } }
 
 ::-moz-selection {
   background: #b3d4fc;
