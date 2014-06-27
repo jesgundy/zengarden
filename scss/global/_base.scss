@@ -177,11 +177,15 @@ footer {
         left: -0.5em;
       }
     }
-
-    // @include mq-min($large) {
-    //   @include font-size(20);
-    // }
   }
+}
+
+
+// Aside content
+.sidebar {
+  border: 1px solid $black;
+  margin-top: 2em;
+  padding: 1px 1em 2em;
 }
 
 

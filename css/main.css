@@ -475,6 +475,11 @@ footer {
         footer a:focus, footer a:hover, footer a:active {
           left: -0.5em; } }
 
+.sidebar {
+  border: 1px solid #333333;
+  margin-top: 2em;
+  padding: 1px 1em 2em; }
+
 ::-moz-selection {
   background: #b3d4fc;
   text-shadow: none; }
