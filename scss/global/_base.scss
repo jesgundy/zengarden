@@ -22,7 +22,7 @@ body {
 
   @include mq-min($medium) {
     width: golden-ratio(100%, -1);
-    margin: 0 0 0 golden-ratio(38.1953%, -2); // offset position
+    margin: 0 0 0 golden-ratio(38.1953%, -2); // apply golden ratio to margins
   }
 }
 
@@ -62,30 +62,14 @@ h2,
 h3 {
   font-family: $sans-bold;
   font-weight: bold;
-  margin: golden-ratio(1em, 2) 0 1em;
   line-height: 1;
+  margin: golden-ratio(1em, 2) 0 1em;
 }
 h1 {
   @include font-size( $fs-x2 );
-  background: $accent;
-  display: inline-block;
   font-family: $sans;
   font-weight: 300;
-  margin: 0 0;
-  padding: golden-ratio(0.5em, 1) 0.5em 0.5em 0;
   position: relative;
-
-  &:before {
-    background: $accent;
-    content: "";
-    display: block;
-    height: 100%;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 1000%;
-    z-index: -1;
-  }
 }
 h2 {
   @include font-size( $fs-x1 );
@@ -105,7 +89,7 @@ p {
 // lists
 ul {
   margin: 0;
-  padding: 0 0 0 1em;
+  padding: 0 0 0 2em;
 }
 
 

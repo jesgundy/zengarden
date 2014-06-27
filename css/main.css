@@ -401,29 +401,15 @@ h2,
 h3 {
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: bold;
-  margin: 2.61792em 0 1em;
-  line-height: 1; }
+  line-height: 1;
+  margin: 2.61792em 0 1em; }
 
 h1 {
   font-size: 41.88678px;
   font-size: 4.18868rem;
-  background: #f5dfd6;
-  display: inline-block;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
-  margin: 0 0;
-  padding: 0.809em 0.5em 0.5em 0;
   position: relative; }
-  h1:before {
-    background: #f5dfd6;
-    content: "";
-    display: block;
-    height: 100%;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 1000%;
-    z-index: -1; }
 
 h2 {
   font-size: 25.888px;
@@ -439,7 +425,7 @@ p {
 
 ul {
   margin: 0;
-  padding: 0 0 0 1em; }
+  padding: 0 0 0 2em; }
 
 ::-moz-selection {
   background: rgba(51, 51, 51, 0.5);
