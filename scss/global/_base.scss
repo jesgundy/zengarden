@@ -8,7 +8,7 @@
 
 // Typography
 body {
-  background: $white;
+  background: $offwhite;
   color: $black;
   font-family: $sans;
   font-weight: 300;
@@ -104,6 +104,50 @@ ul {
 
 }
 
+
+// Footer / utility links
+footer {
+  margin-top: 3em;
+
+  // Helper text
+  &:before {
+    @extend h3;
+    content: "Utility Links:";
+    display: block;
+  }
+
+  // Links Styles
+  a {
+    border: 1px solid $black;
+    cursor: help;
+    display: inline-block;
+    line-height: 1;
+    margin: 0 0 0.25em;
+    padding: 0.25em golden-ratio(0.25em, 1);
+
+    &:focus,
+    &:hover,
+    &:active {
+      background: $white;
+      border: 1px solid $black;
+    }
+
+    // Helper text
+    &.zen-validate-html:before,
+    &.zen-validate-css:before {
+      content: "Validate "
+    }
+    &.zen-license:after {
+      content: " License";
+    }
+    &.zen-accessibility:after {
+      content: " (FAQ)";
+    }
+    &.zen-github:before {
+      content: "Fork via ";
+    }
+  }
+}
 
 
 
