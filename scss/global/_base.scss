@@ -153,10 +153,10 @@ footer {
 
 // Remove text-shadow, customize the background
 ::-moz-selection {
-  background: transparentize($black, 0.5);
+  background: #b3d4fc;
   text-shadow: none;
 }
 ::selection {
-  background: transparentize($black, 0.5);
+  background: #b3d4fc;
   text-shadow: none;
 }
