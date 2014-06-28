@@ -16,6 +16,7 @@ body {
   text-rendering: optimizeLegibility;
 }
 .page-wrapper {
+  @include clearfix;
   @include font-size( $fs-base );
   margin: 0 auto;
   padding: 0 1em 2em;
@@ -48,10 +49,30 @@ a {
   }
 }
 
+// Block Link Style (paired manually with display property)
+@mixin blockLink {
+  &,
+  &:link,
+  &:visited {
+    background: $white;
+    border: 1px solid $gray;
+    line-height: 1;
+    margin: 0 0 0.25em;
+    padding: 0.25em golden-ratio(0.25em, 1) 0.25em;
+  }
 
-// temporary title replacement
+  &:focus,
+  &:hover,
+  &:active {
+    background: $offwhite;
+    border: 1px solid $white;
+  }
+}
+
+
+// Title attributes
 abbr[title] {
-  border: inherit;
+  border: none;
   cursor: help;
 }
 
@@ -60,19 +81,20 @@ abbr[title] {
 h1,
 h2,
 h3 {
+  display: block; // declared for extensions
   font-family: $sans-bold;
   font-weight: bold;
   line-height: 1;
   margin: golden-ratio(1em, 2) 0 1em;
 }
 h1 {
-  @include font-size( $fs-x2 );
+  @include font-size( $fs-huge );
   font-family: $sans;
   font-weight: 300;
   position: relative;
 }
 h2 {
-  @include font-size( $fs-x1 );
+  @include font-size( $fs-big );
 }
 h3 {
   @include font-size( $fs-base );
@@ -80,16 +102,10 @@ h3 {
 }
 
 
-// paragraph
-p {
-  margin: 1em 0;
-}
-
-
-// lists
-ul {
-  margin: 0;
-  padding: 0 0 0 2em;
+// lists (reset all)
+ul,
+ol {
+  @include reset-list;
 }
 
 
@@ -105,7 +121,7 @@ ul {
 }
 
 
-// Footer / utility links
+// Footer content
 footer {
   margin-top: 3em;
 
@@ -130,19 +146,8 @@ footer {
 
   // Links Styles
   a {
-    border: 1px solid $black;
-    cursor: help;
+    @include blockLink;
     display: inline-block;
-    line-height: 1;
-    margin: 0 0 0.25em;
-    padding: 0.25em golden-ratio(0.25em, 1);
-
-    &:focus,
-    &:hover,
-    &:active {
-      background: $white;
-      border: 1px solid $black;
-    }
 
     // Helper text
     &.zen-validate-html:before,
@@ -160,32 +165,52 @@ footer {
     }
 
     @include mq-min($medium) {
-      @include transition(left 0.25s ease);
+      // @include font-size($fs-big);
       display: block;
-      padding-left: 1.5em;
-      position: relative;
-      left: -1em;
+      padding: 0.35em golden-ratio(0.25em, 1) 0.25em 0.5em;
 
       &:before,
       &:after {
         display: none;
-      }
-
-      &:focus,
-      &:hover,
-      &:active {
-        left: -0.5em;
       }
     }
   }
 }
 
 
-// Aside content
 .sidebar {
-  border: 1px solid $black;
-  margin-top: 2em;
-  padding: 1px 1em 2em;
+  &:before {
+    @extend h2;
+    content: "More from the CSS Zen Garden";
+  }
+}
+
+.design-selection {
+
+  a:first-child {
+    @include blockLink;
+    display: inline-block;
+  }
+}
+
+
+// aside misc links
+.design-archives,
+.zen-resources {
+
+  @include mq-min($medium) {
+    float: left;
+    width: 50%;
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  a {
+    @include blockLink;
+    display: inline-block;
+  }
 }
 
 

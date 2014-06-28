@@ -377,6 +377,10 @@ body {
   font-size: 1.6rem;
   margin: 0 auto;
   padding: 0 1em 2em; }
+  .page-wrapper:after {
+    content: "";
+    display: table;
+    clear: both; }
   @media screen and (min-width: 48em) {
     .page-wrapper {
       width: 61.8047%;
@@ -393,13 +397,15 @@ a {
     display: none; }
 
 abbr[title] {
-  border: inherit;
+  border: none;
   cursor: help; }
 
 h1,
 h2,
+.sidebar:before,
 h3,
 footer:before {
+  display: block;
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: bold;
   line-height: 1;
@@ -412,7 +418,7 @@ h1 {
   font-weight: 300;
   position: relative; }
 
-h2 {
+h2, .sidebar:before {
   font-size: 25.888px;
   font-size: 2.5888rem; }
 
@@ -421,12 +427,15 @@ h3, footer:before {
   font-size: 1.6rem;
   text-transform: uppercase; }
 
-p {
-  margin: 1em 0; }
-
-ul {
+ul,
+ol {
+  list-style: none;
   margin: 0;
-  padding: 0 0 0 2em; }
+  padding: 0; }
+  ul li,
+  ol li {
+    margin: 0;
+    padding: 0; }
 
 footer {
   margin-top: 3em; }
@@ -444,15 +453,16 @@ footer {
       footer:before {
         display: none; } }
   footer a {
-    border: 1px solid #333333;
-    cursor: help;
-    display: inline-block;
-    line-height: 1;
-    margin: 0 0 0.25em;
-    padding: 0.25em 0.4045em; }
-    footer a:focus, footer a:hover, footer a:active {
+    display: inline-block; }
+    footer a, footer a:link, footer a:visited {
       background: white;
-      border: 1px solid #333333; }
+      border: 1px solid #dddddd;
+      line-height: 1;
+      margin: 0 0 0.25em;
+      padding: 0.25em 0.4045em 0.25em; }
+    footer a:focus, footer a:hover, footer a:active {
+      background: #efefef;
+      border: 1px solid white; }
     footer a.zen-validate-html:before, footer a.zen-validate-css:before {
       content: "Validate "; }
     footer a.zen-license:after {
@@ -463,22 +473,52 @@ footer {
       content: "Fork via "; }
     @media screen and (min-width: 48em) {
       footer a {
-        -webkit-transition: left 0.25s ease;
-        -moz-transition: left 0.25s ease;
-        transition: left 0.25s ease;
         display: block;
-        padding-left: 1.5em;
-        position: relative;
-        left: -1em; }
+        padding: 0.35em 0.4045em 0.25em 0.5em; }
         footer a:before, footer a:after {
-          display: none; }
-        footer a:focus, footer a:hover, footer a:active {
-          left: -0.5em; } }
+          display: none; } }
 
-.sidebar {
-  border: 1px solid #333333;
-  margin-top: 2em;
-  padding: 1px 1em 2em; }
+.sidebar:before {
+  content: "More from the CSS Zen Garden"; }
+
+.design-selection a:first-child {
+  display: inline-block; }
+  .design-selection a:first-child, .design-selection a:first-child:link, .design-selection a:first-child:visited {
+    background: white;
+    border: 1px solid #dddddd;
+    line-height: 1;
+    margin: 0 0 0.25em;
+    padding: 0.25em 0.4045em 0.25em; }
+  .design-selection a:first-child:focus, .design-selection a:first-child:hover, .design-selection a:first-child:active {
+    background: #efefef;
+    border: 1px solid white; }
+
+@media screen and (min-width: 48em) {
+  .design-archives,
+  .zen-resources {
+    float: left;
+    width: 50%; } }
+.design-archives li,
+.zen-resources li {
+  display: inline-block; }
+.design-archives a,
+.zen-resources a {
+  display: inline-block; }
+  .design-archives a, .design-archives a:link, .design-archives a:visited,
+  .zen-resources a,
+  .zen-resources a:link,
+  .zen-resources a:visited {
+    background: white;
+    border: 1px solid #dddddd;
+    line-height: 1;
+    margin: 0 0 0.25em;
+    padding: 0.25em 0.4045em 0.25em; }
+  .design-archives a:focus, .design-archives a:hover, .design-archives a:active,
+  .zen-resources a:focus,
+  .zen-resources a:hover,
+  .zen-resources a:active {
+    background: #efefef;
+    border: 1px solid white; }
 
 ::-moz-selection {
   background: #b3d4fc;
@@ -520,12 +560,13 @@ footer {
     margin: 0.5cm; }
   p,
   h2,
+  .sidebar:before,
   h3,
   footer:before {
     orphans: 3;
     widows: 3; }
 
-  h2,
+  h2, .sidebar:before,
   h3,
   footer:before {
     page-break-after: avoid; } }
