@@ -440,8 +440,7 @@ ol {
 footer {
   margin-top: 3em; }
   footer:before {
-    content: "Utility Links:";
-    display: block; }
+    content: "Utility Links:"; }
   @media screen and (min-width: 48em) {
     footer {
       font-size: 17px;
@@ -478,6 +477,10 @@ footer {
         footer a:before, footer a:after {
           display: none; } }
 
+.sidebar:after {
+  content: "";
+  display: table;
+  clear: both; }
 .sidebar:before {
   content: "More from the CSS Zen Garden"; }
 
@@ -492,12 +495,24 @@ footer {
   .design-selection a:first-child:focus, .design-selection a:first-child:hover, .design-selection a:first-child:active {
     background: #efefef;
     border: 1px solid white; }
+@media screen and (min-width: 64em) {
+  .design-selection {
+    float: left;
+    padding-right: 1em;
+    width: 61.8047%; }
+    .design-selection h3, .design-selection footer:before {
+      margin-top: 0; } }
 
 @media screen and (min-width: 48em) {
   .design-archives,
   .zen-resources {
     float: left;
     width: 50%; } }
+@media screen and (min-width: 48em) {
+  .design-archives,
+  .zen-resources {
+    float: none;
+    width: auto; } }
 .design-archives li,
 .zen-resources li {
   display: inline-block; }

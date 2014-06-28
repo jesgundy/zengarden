@@ -110,15 +110,6 @@ ol {
 
 
 
-// primary components
-.summary,
-.preamble,
-.explanation,
-.participation,
-.benefits,
-.requirements {
-
-}
 
 
 // Footer content
@@ -129,7 +120,6 @@ footer {
   &:before {
     @extend h3;
     content: "Utility Links:";
-    display: block;
   }
 
   @include mq-min($medium) {
@@ -179,17 +169,34 @@ footer {
 
 
 .sidebar {
+  @include clearfix;
+
   &:before {
     @extend h2;
     content: "More from the CSS Zen Garden";
   }
 }
 
+
+
+
+
 .design-selection {
 
   a:first-child {
     @include blockLink;
     display: inline-block;
+    // @include font-size( $fs-big );
+  }
+
+  @include mq-min($large) {
+    float: left;
+    padding-right: 1em;
+    width: golden-ratio(100%, -1);
+
+    h3 {
+      margin-top: 0;
+    }
   }
 }
 
@@ -201,6 +208,11 @@ footer {
   @include mq-min($medium) {
     float: left;
     width: 50%;
+  }
+
+  @include mq-min($medium) {
+    float: none;
+    width: auto;
   }
 
   li {
