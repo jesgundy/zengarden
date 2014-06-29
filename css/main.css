@@ -375,7 +375,7 @@ body {
 .page-wrapper {
   font-size: 17px;
   font-size: 1.7rem;
-  margin: 0 auto;
+  margin: 6.472em 0 4em;
   padding: 0 1em; }
   .page-wrapper:after {
     content: "";
@@ -400,7 +400,7 @@ a {
 [role="contentinfo"] {
   font-size: 10.5068px;
   font-size: 1.05068rem;
-  border-top: 0.4em solid #dddddd;
+  border-top: 0.4em solid #eaeaea;
   color: #777777;
   display: inline-block;
   letter-spacing: 1px;
@@ -433,6 +433,7 @@ h2,
 .sidebar:before,
 h3,
 footer:before {
+  color: #333333;
   display: block;
   font-weight: bold;
   line-height: 1;
@@ -443,6 +444,7 @@ h1 {
   font-size: 4.45047rem;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
+  margin-top: 0;
   position: relative; }
 
 h2, .sidebar:before {
@@ -467,13 +469,14 @@ ol {
 footer:before {
   content: "This Design:"; }
 footer a, footer a:link, footer a:visited {
-  background: #dddddd;
+  background: #eaeaea;
   border: none;
+  color: #333333;
   display: inline-block;
   line-height: 1;
-  padding: 0.4045em 0.65448em 0.25em; }
+  padding: 0.4045em 0.4045em 0.25em; }
 footer a:focus, footer a:hover, footer a:active {
-  background: #c4c4c4; }
+  background: #d1d1d1; }
 
 .sidebar:after {
   content: "";
@@ -481,6 +484,63 @@ footer a:focus, footer a:hover, footer a:active {
   clear: both; }
 .sidebar:before {
   content: "More from the CSS Zen Garden"; }
+
+.design-selection li {
+  font-size: 10.5068px;
+  font-size: 1.05068rem;
+  border-top: 0.4em solid #eaeaea;
+  color: #777777;
+  display: inline-block;
+  letter-spacing: 1px;
+  padding: 0.25em 0;
+  margin: 0;
+  text-transform: uppercase;
+  border: none;
+  display: block; }
+  .design-selection li a:link,
+  .design-selection li a:visited {
+    border-color: #aaaaaa;
+    color: #777777; }
+  .design-selection li a:focus,
+  .design-selection li a:hover,
+  .design-selection li a:active {
+    border-color: #aaaaaa; }
+  .design-selection li .indicator {
+    display: none; }
+.design-selection a:first-child {
+  font-size: 17px;
+  font-size: 1.7rem;
+  letter-spacing: 0;
+  text-transform: none; }
+  .design-selection a:first-child, .design-selection a:first-child:link, .design-selection a:first-child:visited {
+    background: #eaeaea;
+    border: none;
+    color: #333333;
+    display: inline-block;
+    line-height: 1;
+    padding: 0.4045em 0.4045em 0.25em; }
+  .design-selection a:first-child:focus, .design-selection a:first-child:hover, .design-selection a:first-child:active {
+    background: #d1d1d1; }
+
+.design-archives li,
+.zen-resources li {
+  display: inline-block;
+  margin: 0 0 0.25em; }
+.design-archives a, .design-archives a:link, .design-archives a:visited,
+.zen-resources a,
+.zen-resources a:link,
+.zen-resources a:visited {
+  background: #eaeaea;
+  border: none;
+  color: #333333;
+  display: inline-block;
+  line-height: 1;
+  padding: 0.4045em 0.4045em 0.25em; }
+.design-archives a:focus, .design-archives a:hover, .design-archives a:active,
+.zen-resources a:focus,
+.zen-resources a:hover,
+.zen-resources a:active {
+  background: #d1d1d1; }
 
 ::-moz-selection {
   background: #b3d4fc;
