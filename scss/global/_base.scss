@@ -49,6 +49,7 @@ a {
   }
 }
 
+
 // Block Link Style (paired manually with display property)
 @mixin blockLink {
   &,
@@ -64,9 +65,35 @@ a {
   &:focus,
   &:hover,
   &:active {
-    background: $offwhite;
+    background: $gray;
     border: 1px solid $white;
   }
+}
+
+
+@mixin subtext {
+  @include font-size($fs-small);
+  background: $gray;
+  color: $dark-gray;
+  display: inline-block;
+  padding: 0.5em 1em;
+
+  a:link,
+  a:visited {
+    border-color: lighten($dark-gray, 12%);
+    color: $dark-gray;
+
+    &:focus,
+    &:hover,
+    &:active {
+      border-color: lighten($dark-gray, 12%);
+    }
+  }
+}
+
+.summary p:last-child,
+[role="contentinfo"] {
+  @include subtext;
 }
 
 
@@ -182,11 +209,12 @@ footer {
 
 
 .design-selection {
+  @include font-size($fs-small);
 
   a:first-child {
     @include blockLink;
+    @include font-size($fs-base);
     display: inline-block;
-    // @include font-size( $fs-big );
   }
 
   @include mq-min($large) {

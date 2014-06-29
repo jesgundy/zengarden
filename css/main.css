@@ -396,6 +396,32 @@ a {
   a .indicator {
     display: none; }
 
+.summary p:last-child,
+[role="contentinfo"] {
+  font-size: 14px;
+  font-size: 1.4rem;
+  background: #dddddd;
+  color: #626262;
+  display: inline-block;
+  padding: 0.5em 1em; }
+  .summary p:last-child a:link,
+  .summary p:last-child a:visited,
+  [role="contentinfo"] a:link,
+  [role="contentinfo"] a:visited {
+    border-color: #818181;
+    color: #626262; }
+    .summary p:last-child a:link:focus, .summary p:last-child a:link:hover, .summary p:last-child a:link:active,
+    .summary p:last-child a:visited:focus,
+    .summary p:last-child a:visited:hover,
+    .summary p:last-child a:visited:active,
+    [role="contentinfo"] a:link:focus,
+    [role="contentinfo"] a:link:hover,
+    [role="contentinfo"] a:link:active,
+    [role="contentinfo"] a:visited:focus,
+    [role="contentinfo"] a:visited:hover,
+    [role="contentinfo"] a:visited:active {
+      border-color: #818181; }
+
 abbr[title] {
   border: none;
   cursor: help; }
@@ -460,7 +486,7 @@ footer {
       margin: 0 0 0.25em;
       padding: 0.25em 0.4045em 0.25em; }
     footer a:focus, footer a:hover, footer a:active {
-      background: #efefef;
+      background: #dddddd;
       border: 1px solid white; }
     footer a.zen-validate-html:before, footer a.zen-validate-css:before {
       content: "Validate "; }
@@ -484,24 +510,29 @@ footer {
 .sidebar:before {
   content: "More from the CSS Zen Garden"; }
 
-.design-selection a:first-child {
-  display: inline-block; }
-  .design-selection a:first-child, .design-selection a:first-child:link, .design-selection a:first-child:visited {
-    background: white;
-    border: 1px solid #dddddd;
-    line-height: 1;
-    margin: 0 0 0.25em;
-    padding: 0.25em 0.4045em 0.25em; }
-  .design-selection a:first-child:focus, .design-selection a:first-child:hover, .design-selection a:first-child:active {
-    background: #efefef;
-    border: 1px solid white; }
-@media screen and (min-width: 64em) {
-  .design-selection {
-    float: left;
-    padding-right: 1em;
-    width: 61.8047%; }
-    .design-selection h3, .design-selection footer:before {
-      margin-top: 0; } }
+.design-selection {
+  font-size: 14px;
+  font-size: 1.4rem; }
+  .design-selection a:first-child {
+    font-size: 16px;
+    font-size: 1.6rem;
+    display: inline-block; }
+    .design-selection a:first-child, .design-selection a:first-child:link, .design-selection a:first-child:visited {
+      background: white;
+      border: 1px solid #dddddd;
+      line-height: 1;
+      margin: 0 0 0.25em;
+      padding: 0.25em 0.4045em 0.25em; }
+    .design-selection a:first-child:focus, .design-selection a:first-child:hover, .design-selection a:first-child:active {
+      background: #dddddd;
+      border: 1px solid white; }
+  @media screen and (min-width: 64em) {
+    .design-selection {
+      float: left;
+      padding-right: 1em;
+      width: 61.8047%; }
+      .design-selection h3, .design-selection footer:before {
+        margin-top: 0; } }
 
 @media screen and (min-width: 48em) {
   .design-archives,
@@ -532,7 +563,7 @@ footer {
   .zen-resources a:focus,
   .zen-resources a:hover,
   .zen-resources a:active {
-    background: #efefef;
+    background: #dddddd;
     border: 1px solid white; }
 
 ::-moz-selection {

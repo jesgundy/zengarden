@@ -4,6 +4,7 @@ $sans-bold: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 
 
 // Font sizes
+$fs-small: 14;
 $fs-base: 16;
 $fs-big: golden-ratio( $fs-base, 1 );
 $fs-huge: golden-ratio( $fs-base, 2 );
@@ -13,8 +14,8 @@ $fs-huge: golden-ratio( $fs-base, 2 );
 $white: #FFF;
 $offwhite: #EFEFEF;
 $gray: #DDD;
+$dark-gray: #626262;
 $black: #333;
-$accent: lighten(#E6B098, 15%);
 
 
 // Breakpoint Variables
