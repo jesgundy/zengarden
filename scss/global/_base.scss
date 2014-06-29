@@ -8,7 +8,7 @@
 
 // Typography
 body {
-  background: $offwhite;
+  background: $white;
   color: $black;
   font-family: $sans;
   font-weight: 300;
@@ -55,8 +55,10 @@ a {
   &,
   &:link,
   &:visited {
-    background: $white;
-    border: 1px solid $gray;
+    // background: $white;
+
+    border: 1px solid $black;
+    border-left: 5px double $black;
     line-height: 1;
     margin: 0 0 0.25em;
     padding: 0.25em golden-ratio(0.25em, 1) 0.25em;
@@ -65,15 +67,17 @@ a {
   &:focus,
   &:hover,
   &:active {
-    background: $gray;
-    border: 1px solid $white;
+    // color: $dark-gray;
+    // border: 1px solid $dark-gray;
+    // border-left: 5px double $dark-gray;
+    background: $light-gray;
   }
 }
 
 
 @mixin subtext {
   @include font-size($fs-small);
-  background: $gray;
+  background: $light-gray;
   color: $dark-gray;
   display: inline-block;
   padding: 0.5em 1em;
@@ -151,13 +155,13 @@ footer {
 
   @include mq-min($medium) {
     @include font-size(17);
-    left: 0;
-    margin-top: golden-ratio(4em, 1);
-    position: fixed;
-    top: 0;
+    // right: 0;
+    // margin-top: golden-ratio(4em, 1);
+    // position: fixed;
+    // top: 0;
 
     &:before {
-      display: none;
+      // display: none;
     }
   }
 
@@ -183,12 +187,12 @@ footer {
 
     @include mq-min($medium) {
       // @include font-size($fs-big);
-      display: block;
-      padding: 0.35em golden-ratio(0.25em, 1) 0.25em 0.5em;
+      // display: block;
+      // padding: 0.35em golden-ratio(0.25em, 1) 0.25em 0.5em;
 
       &:before,
       &:after {
-        display: none;
+        // display: none;
       }
     }
   }
