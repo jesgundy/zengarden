@@ -1,18 +1,17 @@
 // Font Stack
 $sans: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-$sans-bold: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 
 
 // Font sizes
-$fs-small: 14;
-$fs-base: 16;
+$fs-base: 17;
+$fs-small: golden-ratio( $fs-base, -1 );
 $fs-big: golden-ratio( $fs-base, 1 );
 $fs-huge: golden-ratio( $fs-base, 2 );
 
 
 // Colors
 $white: #FFF;
-$accent: #F1F1E1;
+$light-gray: #DDD;
 $gray: #777;
 $black: #333;
 

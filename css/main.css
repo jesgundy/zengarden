@@ -373,8 +373,8 @@ body {
   text-rendering: optimizeLegibility; }
 
 .page-wrapper {
-  font-size: 16px;
-  font-size: 1.6rem;
+  font-size: 17px;
+  font-size: 1.7rem;
   margin: 0 auto;
   padding: 0 1em; }
   .page-wrapper:after {
@@ -398,12 +398,31 @@ a {
 
 .summary p:last-child,
 [role="contentinfo"] {
-  font-size: 14px;
-  font-size: 1.4rem;
-  border: 0.25em solid #f1f1e1;
+  font-size: 10.5068px;
+  font-size: 1.05068rem;
+  border-top: 0.4em solid #dddddd;
   color: #777777;
   display: inline-block;
-  padding: 0.5em 1em; }
+  letter-spacing: 1px;
+  padding: 0.25em 0;
+  margin: 0;
+  text-transform: uppercase; }
+  .summary p:last-child a:link,
+  .summary p:last-child a:visited,
+  [role="contentinfo"] a:link,
+  [role="contentinfo"] a:visited {
+    border-color: #aaaaaa;
+    color: #777777; }
+  .summary p:last-child a:focus,
+  .summary p:last-child a:hover,
+  .summary p:last-child a:active,
+  [role="contentinfo"] a:focus,
+  [role="contentinfo"] a:hover,
+  [role="contentinfo"] a:active {
+    border-color: #aaaaaa; }
+  .summary p:last-child .indicator,
+  [role="contentinfo"] .indicator {
+    display: none; }
 
 abbr[title] {
   border: none;
@@ -415,25 +434,24 @@ h2,
 h3,
 footer:before {
   display: block;
-  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: bold;
   line-height: 1;
   margin: 2.61792em 0 1em; }
 
 h1 {
-  font-size: 41.88678px;
-  font-size: 4.18868rem;
+  font-size: 44.50471px;
+  font-size: 4.45047rem;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
   position: relative; }
 
 h2, .sidebar:before {
-  font-size: 25.888px;
-  font-size: 2.5888rem; }
+  font-size: 27.506px;
+  font-size: 2.7506rem; }
 
 h3, footer:before {
-  font-size: 16px;
-  font-size: 1.6rem;
+  font-size: 17px;
+  font-size: 1.7rem;
   text-transform: uppercase; }
 
 ul,
@@ -446,43 +464,16 @@ ol {
     margin: 0;
     padding: 0; }
 
-footer {
-  margin-top: 3em; }
-  footer:before {
-    content: "This Design:"; }
-  @media screen and (min-width: 48em) {
-    footer {
-      font-size: 17px;
-      font-size: 1.7rem;
-      bottom: 4em;
-      right: -1px;
-      margin-top: 6.472em;
-      position: fixed; }
-      footer:before {
-        margin-top: 0; } }
-  footer a {
-    display: inline-block; }
-    footer a, footer a:link, footer a:visited {
-      border: 1px solid #e9e9d0;
-      background: #f1f1e1;
-      border-left: 5px double #777777;
-      line-height: 1;
-      margin: 0 0 0.25em;
-      padding: 0.25em 0.4045em 0.25em; }
-    footer a:focus, footer a:hover, footer a:active {
-      background: #e9e9d0; }
-    footer a.zen-validate-html:before, footer a.zen-validate-css:before {
-      content: "Validate "; }
-    footer a.zen-license:after {
-      content: " License"; }
-    footer a.zen-accessibility:after {
-      content: " (FAQ)"; }
-    footer a.zen-github:before {
-      content: "Fork via "; }
-    @media screen and (min-width: 48em) {
-      footer a {
-        display: block;
-        padding: 0.35em 0.4045em 0.25em 0.5em; } }
+footer:before {
+  content: "This Design:"; }
+footer a, footer a:link, footer a:visited {
+  background: #dddddd;
+  border: none;
+  display: inline-block;
+  line-height: 1;
+  padding: 0.4045em 0.65448em 0.25em; }
+footer a:focus, footer a:hover, footer a:active {
+  background: #c4c4c4; }
 
 .sidebar:after {
   content: "";
@@ -490,62 +481,6 @@ footer {
   clear: both; }
 .sidebar:before {
   content: "More from the CSS Zen Garden"; }
-
-.design-selection {
-  font-size: 14px;
-  font-size: 1.4rem; }
-  .design-selection a:first-child {
-    font-size: 16px;
-    font-size: 1.6rem;
-    display: inline-block; }
-    .design-selection a:first-child, .design-selection a:first-child:link, .design-selection a:first-child:visited {
-      border: 1px solid #e9e9d0;
-      background: #f1f1e1;
-      border-left: 5px double #777777;
-      line-height: 1;
-      margin: 0 0 0.25em;
-      padding: 0.25em 0.4045em 0.25em; }
-    .design-selection a:first-child:focus, .design-selection a:first-child:hover, .design-selection a:first-child:active {
-      background: #e9e9d0; }
-  @media screen and (min-width: 64em) {
-    .design-selection {
-      float: left;
-      padding-right: 1em;
-      width: 61.8047%; }
-      .design-selection h3, .design-selection footer:before {
-        margin-top: 0; } }
-
-@media screen and (min-width: 48em) {
-  .design-archives,
-  .zen-resources {
-    float: left;
-    width: 50%; } }
-@media screen and (min-width: 48em) {
-  .design-archives,
-  .zen-resources {
-    float: none;
-    width: auto; } }
-.design-archives li,
-.zen-resources li {
-  display: inline-block; }
-.design-archives a,
-.zen-resources a {
-  display: inline-block; }
-  .design-archives a, .design-archives a:link, .design-archives a:visited,
-  .zen-resources a,
-  .zen-resources a:link,
-  .zen-resources a:visited {
-    border: 1px solid #e9e9d0;
-    background: #f1f1e1;
-    border-left: 5px double #777777;
-    line-height: 1;
-    margin: 0 0 0.25em;
-    padding: 0.25em 0.4045em 0.25em; }
-  .design-archives a:focus, .design-archives a:hover, .design-archives a:active,
-  .zen-resources a:focus,
-  .zen-resources a:hover,
-  .zen-resources a:active {
-    background: #e9e9d0; }
 
 ::-moz-selection {
   background: #b3d4fc;

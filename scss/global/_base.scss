@@ -21,9 +21,10 @@ body {
   margin: 0 auto;
   padding: 0 1em;
 
+  // apply golden ratio to layout
   @include mq-min($medium) {
     width: golden-ratio(100%, -1);
-    margin: golden-ratio(4em, 1) 0 4em golden-ratio(38.1953%, -2); // apply golden ratio to margins
+    margin: golden-ratio(4em, 1) 0 4em golden-ratio(38.1953%, -2);
   }
 }
 
@@ -50,33 +51,49 @@ a {
 }
 
 
-// Block Link Style (paired manually with display property)
+@mixin subtext {
+  @include font-size($fs-small);
+  border-top: 0.4em solid $light-gray;
+  color: $gray;
+  display: inline-block;
+  letter-spacing: 1px;
+  padding: 0.25em 0;
+  margin: 0;
+  text-transform: uppercase;
+
+
+  a:link,
+  a:visited {
+    border-color: lighten($gray, 20%);
+    color: $gray;
+  }
+
+  a:focus,
+  a:hover,
+  a:active {
+    border-color: lighten($gray, 20%);
+  }
+
+  .indicator {
+    display: none;
+  }
+}
 @mixin blockLink {
   &,
   &:link,
   &:visited {
-    border: 1px solid darken($accent, 5%);
-    background: $accent;
-    border-left: 5px double $gray;
+    background: $light-gray;
+    border: none;
+    display: inline-block;
     line-height: 1;
-    margin: 0 0 0.25em;
-    padding: 0.25em golden-ratio(0.25em, 1) 0.25em;
+    padding: golden-ratio(0.25em, 1) golden-ratio(0.25em, 2) 0.25em;
   }
 
   &:focus,
   &:hover,
   &:active {
-    background: darken($accent, 5%);
+    background: darken($light-gray, 10%);
   }
-}
-
-
-@mixin subtext {
-  @include font-size($fs-small);
-  border: 0.25em solid $accent;
-  color: $gray;
-  display: inline-block;
-  padding: 0.5em 1em;
 }
 
 .summary p:last-child,
@@ -97,7 +114,6 @@ h1,
 h2,
 h3 {
   display: block; // declared for extensions
-  font-family: $sans-bold;
   font-weight: bold;
   line-height: 1;
   margin: golden-ratio(1em, 2) 0 1em;
@@ -129,7 +145,6 @@ ol {
 
 // Footer content
 footer {
-  margin-top: 3em;
 
   // Helper text
   &:before {
@@ -137,47 +152,8 @@ footer {
     content: "This Design:";
   }
 
-  @include mq-min($medium) {
-    @include font-size(17);
-    bottom: 4em;
-    right: -1px;
-    margin-top: golden-ratio(4em, 1);
-    position: fixed;
-
-    &:before {
-      margin-top: 0;
-    }
-  }
-
-  // Links Styles
   a {
     @include blockLink;
-    display: inline-block;
-
-    // Helper text
-    &.zen-validate-html:before,
-    &.zen-validate-css:before {
-      content: "Validate "
-    }
-    &.zen-license:after {
-      content: " License";
-    }
-    &.zen-accessibility:after {
-      content: " (FAQ)";
-    }
-    &.zen-github:before {
-      content: "Fork via ";
-    }
-
-    @include mq-min($medium) {
-      display: block;
-      padding: 0.35em golden-ratio(0.25em, 1) 0.25em 0.5em;
-
-      &:before,
-      &:after {
-        // display: none;
-      }
-    }
   }
 }
 
@@ -196,49 +172,8 @@ footer {
 
 
 .design-selection {
-  @include font-size($fs-small);
-
-  a:first-child {
-    @include blockLink;
-    @include font-size($fs-base);
-    display: inline-block;
-  }
-
-  @include mq-min($large) {
-    float: left;
-    padding-right: 1em;
-    width: golden-ratio(100%, -1);
-
-    h3 {
-      margin-top: 0;
-    }
-  }
 }
 
-
-// aside misc links
-.design-archives,
-.zen-resources {
-
-  @include mq-min($medium) {
-    float: left;
-    width: 50%;
-  }
-
-  @include mq-min($medium) {
-    float: none;
-    width: auto;
-  }
-
-  li {
-    display: inline-block;
-  }
-
-  a {
-    @include blockLink;
-    display: inline-block;
-  }
-}
 
 
 
