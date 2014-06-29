@@ -376,7 +376,7 @@ body {
   font-size: 16px;
   font-size: 1.6rem;
   margin: 0 auto;
-  padding: 0 1em 2em; }
+  padding: 0 1em; }
   .page-wrapper:after {
     content: "";
     display: table;
@@ -400,27 +400,10 @@ a {
 [role="contentinfo"] {
   font-size: 14px;
   font-size: 1.4rem;
-  background: #eeeeee;
-  color: #666666;
+  border: 0.25em solid #f1f1e1;
+  color: #777777;
   display: inline-block;
   padding: 0.5em 1em; }
-  .summary p:last-child a:link,
-  .summary p:last-child a:visited,
-  [role="contentinfo"] a:link,
-  [role="contentinfo"] a:visited {
-    border-color: #858585;
-    color: #666666; }
-    .summary p:last-child a:link:focus, .summary p:last-child a:link:hover, .summary p:last-child a:link:active,
-    .summary p:last-child a:visited:focus,
-    .summary p:last-child a:visited:hover,
-    .summary p:last-child a:visited:active,
-    [role="contentinfo"] a:link:focus,
-    [role="contentinfo"] a:link:hover,
-    [role="contentinfo"] a:link:active,
-    [role="contentinfo"] a:visited:focus,
-    [role="contentinfo"] a:visited:hover,
-    [role="contentinfo"] a:visited:active {
-      border-color: #858585; }
 
 abbr[title] {
   border: none;
@@ -466,21 +449,28 @@ ol {
 footer {
   margin-top: 3em; }
   footer:before {
-    content: "Utility Links:"; }
+    content: "This Design:"; }
   @media screen and (min-width: 48em) {
     footer {
       font-size: 17px;
-      font-size: 1.7rem; } }
+      font-size: 1.7rem;
+      bottom: 4em;
+      right: -1px;
+      margin-top: 6.472em;
+      position: fixed; }
+      footer:before {
+        margin-top: 0; } }
   footer a {
     display: inline-block; }
     footer a, footer a:link, footer a:visited {
-      border: 1px solid #333333;
-      border-left: 5px double #333333;
+      border: 1px solid #e9e9d0;
+      background: #f1f1e1;
+      border-left: 5px double #777777;
       line-height: 1;
       margin: 0 0 0.25em;
       padding: 0.25em 0.4045em 0.25em; }
     footer a:focus, footer a:hover, footer a:active {
-      background: #eeeeee; }
+      background: #e9e9d0; }
     footer a.zen-validate-html:before, footer a.zen-validate-css:before {
       content: "Validate "; }
     footer a.zen-license:after {
@@ -489,6 +479,10 @@ footer {
       content: " (FAQ)"; }
     footer a.zen-github:before {
       content: "Fork via "; }
+    @media screen and (min-width: 48em) {
+      footer a {
+        display: block;
+        padding: 0.35em 0.4045em 0.25em 0.5em; } }
 
 .sidebar:after {
   content: "";
@@ -505,13 +499,14 @@ footer {
     font-size: 1.6rem;
     display: inline-block; }
     .design-selection a:first-child, .design-selection a:first-child:link, .design-selection a:first-child:visited {
-      border: 1px solid #333333;
-      border-left: 5px double #333333;
+      border: 1px solid #e9e9d0;
+      background: #f1f1e1;
+      border-left: 5px double #777777;
       line-height: 1;
       margin: 0 0 0.25em;
       padding: 0.25em 0.4045em 0.25em; }
     .design-selection a:first-child:focus, .design-selection a:first-child:hover, .design-selection a:first-child:active {
-      background: #eeeeee; }
+      background: #e9e9d0; }
   @media screen and (min-width: 64em) {
     .design-selection {
       float: left;
@@ -540,8 +535,9 @@ footer {
   .zen-resources a,
   .zen-resources a:link,
   .zen-resources a:visited {
-    border: 1px solid #333333;
-    border-left: 5px double #333333;
+    border: 1px solid #e9e9d0;
+    background: #f1f1e1;
+    border-left: 5px double #777777;
     line-height: 1;
     margin: 0 0 0.25em;
     padding: 0.25em 0.4045em 0.25em; }
@@ -549,7 +545,7 @@ footer {
   .zen-resources a:focus,
   .zen-resources a:hover,
   .zen-resources a:active {
-    background: #eeeeee; }
+    background: #e9e9d0; }
 
 ::-moz-selection {
   background: #b3d4fc;

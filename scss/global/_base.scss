@@ -19,7 +19,7 @@ body {
   @include clearfix;
   @include font-size( $fs-base );
   margin: 0 auto;
-  padding: 0 1em 2em;
+  padding: 0 1em;
 
   @include mq-min($medium) {
     width: golden-ratio(100%, -1);
@@ -55,10 +55,9 @@ a {
   &,
   &:link,
   &:visited {
-    // background: $white;
-
-    border: 1px solid $black;
-    border-left: 5px double $black;
+    border: 1px solid darken($accent, 5%);
+    background: $accent;
+    border-left: 5px double $gray;
     line-height: 1;
     margin: 0 0 0.25em;
     padding: 0.25em golden-ratio(0.25em, 1) 0.25em;
@@ -67,32 +66,17 @@ a {
   &:focus,
   &:hover,
   &:active {
-    // color: $dark-gray;
-    // border: 1px solid $dark-gray;
-    // border-left: 5px double $dark-gray;
-    background: $light-gray;
+    background: darken($accent, 5%);
   }
 }
 
 
 @mixin subtext {
   @include font-size($fs-small);
-  background: $light-gray;
-  color: $dark-gray;
+  border: 0.25em solid $accent;
+  color: $gray;
   display: inline-block;
   padding: 0.5em 1em;
-
-  a:link,
-  a:visited {
-    border-color: lighten($dark-gray, 12%);
-    color: $dark-gray;
-
-    &:focus,
-    &:hover,
-    &:active {
-      border-color: lighten($dark-gray, 12%);
-    }
-  }
 }
 
 .summary p:last-child,
@@ -150,18 +134,18 @@ footer {
   // Helper text
   &:before {
     @extend h3;
-    content: "Utility Links:";
+    content: "This Design:";
   }
 
   @include mq-min($medium) {
     @include font-size(17);
-    // right: 0;
-    // margin-top: golden-ratio(4em, 1);
-    // position: fixed;
-    // top: 0;
+    bottom: 4em;
+    right: -1px;
+    margin-top: golden-ratio(4em, 1);
+    position: fixed;
 
     &:before {
-      // display: none;
+      margin-top: 0;
     }
   }
 
@@ -186,9 +170,8 @@ footer {
     }
 
     @include mq-min($medium) {
-      // @include font-size($fs-big);
-      // display: block;
-      // padding: 0.35em golden-ratio(0.25em, 1) 0.25em 0.5em;
+      display: block;
+      padding: 0.35em golden-ratio(0.25em, 1) 0.25em 0.5em;
 
       &:before,
       &:after {
