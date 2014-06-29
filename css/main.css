@@ -522,6 +522,12 @@ footer a:focus, footer a:hover, footer a:active {
   .design-selection a:first-child:focus, .design-selection a:first-child:hover, .design-selection a:first-child:active {
     background: #d1d1d1; }
 
+@media screen and (min-width: 20em) {
+  .design-archives,
+  .zen-resources {
+    float: right;
+    padding-right: 1em;
+    width: 50%; } }
 .design-archives li,
 .zen-resources li {
   display: inline-block;

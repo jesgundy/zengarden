@@ -174,7 +174,6 @@ footer {
 .design-selection {
 
   li {
-    // margin: 0 0 0.25em;
     @include subtext;
     border: none;
     display: block;
@@ -193,6 +192,12 @@ footer {
 .design-archives,
 .zen-resources {
 
+  @include mq-min($small) {
+    float: right;
+    padding-right: 1em;
+    width: 50%;
+  }
+
   li {
     display: inline-block;
     margin: 0 0 0.25em;
@@ -202,7 +207,6 @@ footer {
     @include blockLink;
   }
 }
-
 
 
 
