@@ -468,15 +468,25 @@ ol {
 
 footer:before {
   content: "This Design:"; }
-footer a, footer a:link, footer a:visited {
-  background: #eaeaea;
-  border: none;
-  color: #333333;
-  display: inline-block;
-  line-height: 1;
-  padding: 0.4045em 0.4045em 0.25em; }
-footer a:focus, footer a:hover, footer a:active {
-  background: #d1d1d1; }
+footer a {
+  margin-bottom: 0.25em; }
+  footer a, footer a:link, footer a:visited {
+    background: #eaeaea;
+    border: none;
+    color: #333333;
+    display: inline-block;
+    line-height: 1;
+    padding: 0.4045em 0.4045em 0.25em; }
+  footer a:focus, footer a:hover, footer a:active {
+    background: #d1d1d1; }
+  footer a.zen-validate-html:before, footer a.zen-validate-css:before {
+    content: "Validate "; }
+  footer a.zen-license:after {
+    content: " License"; }
+  footer a.zen-accessibility:after {
+    content: " (FAQ)"; }
+  footer a.zen-github:before {
+    content: "Fork via "; }
 
 .sidebar:after {
   content: "";
