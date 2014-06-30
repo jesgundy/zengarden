@@ -542,6 +542,10 @@ footer a {
     padding: 0.4045em 0.4045em 0.25em; }
   .design-selection a:first-child:focus, .design-selection a:first-child:hover, .design-selection a:first-child:active {
     background: #d1d1d1; }
+@media screen and (min-width: 64em) {
+  .design-selection {
+    float: left;
+    width: 50%; } }
 
 @media screen and (min-width: 20em) {
   .design-archives,

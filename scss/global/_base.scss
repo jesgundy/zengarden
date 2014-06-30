@@ -90,6 +90,8 @@ a {
     display: none;
   }
 }
+
+
 @mixin blockLink {
   &,
   &:link,
@@ -108,6 +110,7 @@ a {
     background: darken($light-gray, 10%);
   }
 }
+
 
 .summary p:last-child,
 [role="contentinfo"] {
@@ -214,6 +217,11 @@ footer {
     text-transform: none;
   }
 
+  @include mq-min($large) {
+    float: left;
+    width: 50%;
+  }
+
 }
 
 
@@ -235,7 +243,6 @@ footer {
     @include blockLink;
   }
 }
-
 
 
 // Remove text-shadow, customize the background
