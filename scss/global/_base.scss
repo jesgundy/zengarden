@@ -23,8 +23,21 @@ body {
 
   // apply golden ratio to layout
   @include mq-min($medium) {
+    margin: 0 0 0 golden-ratio(38.1953%, -2);
+    padding: golden-ratio(4em, 1) 0 4em;
+    position: relative;
     width: golden-ratio(100%, -1);
-    margin: golden-ratio(4em, 1) 0 4em golden-ratio(38.1953%, -2);
+
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      height: 100%;
+      left: -2em;
+      width: 1em;
+      border-left: 1em double lighten($light-gray, 2%);
+    }
   }
 }
 
@@ -53,14 +66,13 @@ a {
 
 @mixin subtext {
   @include font-size($fs-small);
-  border-top: 0.4em solid $light-gray;
+  border-top: 0.6em double $light-gray;
   color: $gray;
   display: inline-block;
   letter-spacing: 1px;
   padding: 0.25em 0;
   margin: 0;
   text-transform: uppercase;
-
 
   a:link,
   a:visited {

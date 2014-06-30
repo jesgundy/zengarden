@@ -383,8 +383,19 @@ body {
     clear: both; }
   @media screen and (min-width: 48em) {
     .page-wrapper {
-      width: 61.8047%;
-      margin: 6.472em 0 4em 14.58992%; } }
+      margin: 0 0 0 14.58992%;
+      padding: 6.472em 0 4em;
+      position: relative;
+      width: 61.8047%; }
+      .page-wrapper:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        height: 100%;
+        left: -2em;
+        width: 1em;
+        border-left: 1em double #efefef; } }
 
 a {
   text-decoration: none; }
@@ -400,7 +411,7 @@ a {
 [role="contentinfo"] {
   font-size: 10.5068px;
   font-size: 1.05068rem;
-  border-top: 0.4em solid #eaeaea;
+  border-top: 0.6em double #eaeaea;
   color: #777777;
   display: inline-block;
   letter-spacing: 1px;
@@ -498,7 +509,7 @@ footer a {
 .design-selection li {
   font-size: 10.5068px;
   font-size: 1.05068rem;
-  border-top: 0.4em solid #eaeaea;
+  border-top: 0.6em double #eaeaea;
   color: #777777;
   display: inline-block;
   letter-spacing: 1px;
