@@ -407,6 +407,43 @@ a {
   a .indicator {
     display: none; }
 
+h1,
+h2,
+.sidebar:before,
+h3,
+footer:before {
+  color: #333333;
+  display: block;
+  font-weight: bold;
+  line-height: 1;
+  margin: 2.61792em 0 1em; }
+
+h1 {
+  font-size: 44.50471px;
+  font-size: 4.45047rem;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  margin-top: 0; }
+
+h2, .sidebar:before {
+  font-size: 27.506px;
+  font-size: 2.7506rem; }
+
+h3, footer:before {
+  font-size: 17px;
+  font-size: 1.7rem;
+  text-transform: uppercase; }
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  ul li,
+  ol li {
+    margin: 0;
+    padding: 0; }
+
 .summary p:last-child,
 [role="contentinfo"] {
   font-size: 10.5068px;
@@ -439,44 +476,6 @@ abbr[title] {
   border: none;
   cursor: help; }
 
-h1,
-h2,
-.sidebar:before,
-h3,
-footer:before {
-  color: #333333;
-  display: block;
-  font-weight: bold;
-  line-height: 1;
-  margin: 2.61792em 0 1em; }
-
-h1 {
-  font-size: 44.50471px;
-  font-size: 4.45047rem;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-weight: 300;
-  margin-top: 0;
-  position: relative; }
-
-h2, .sidebar:before {
-  font-size: 27.506px;
-  font-size: 2.7506rem; }
-
-h3, footer:before {
-  font-size: 17px;
-  font-size: 1.7rem;
-  text-transform: uppercase; }
-
-ul,
-ol {
-  list-style: none;
-  margin: 0;
-  padding: 0; }
-  ul li,
-  ol li {
-    margin: 0;
-    padding: 0; }
-
 footer:before {
   content: "This Design:"; }
 footer a {
@@ -506,6 +505,10 @@ footer a {
 .sidebar:before {
   content: "More from the CSS Zen Garden"; }
 
+@media screen and (min-width: 64em) {
+  .design-selection {
+    float: left;
+    width: 50%; } }
 .design-selection li {
   font-size: 10.5068px;
   font-size: 1.05068rem;
@@ -542,10 +545,6 @@ footer a {
     padding: 0.4045em 0.4045em 0.25em; }
   .design-selection a:first-child:focus, .design-selection a:first-child:hover, .design-selection a:first-child:active {
     background: #d1d1d1; }
-@media screen and (min-width: 64em) {
-  .design-selection {
-    float: left;
-    width: 50%; } }
 
 @media screen and (min-width: 20em) {
   .design-archives,
@@ -574,52 +573,9 @@ footer a {
   background: #d1d1d1; }
 
 ::-moz-selection {
-  background: #b3d4fc;
+  background: #eaeaea;
   text-shadow: none; }
 
 ::selection {
-  background: #b3d4fc;
+  background: #eaeaea;
   text-shadow: none; }
-
-@media print {
-  * {
-    background: transparent !important;
-    color: #000 !important;
-    /* Black prints faster: h5bp.com/s */
-    box-shadow: none !important;
-    text-shadow: none !important; }
-
-  a,
-  a:visited {
-    text-decoration: underline; }
-
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid; }
-
-  thead {
-    display: table-header-group;
-    /* h5bp.com/t */ }
-
-  tr,
-  img {
-    page-break-inside: avoid; }
-
-  img {
-    max-width: 100% !important; }
-
-  @page {
-    margin: 0.5cm; }
-  p,
-  h2,
-  .sidebar:before,
-  h3,
-  footer:before {
-    orphans: 3;
-    widows: 3; }
-
-  h2, .sidebar:before,
-  h3,
-  footer:before {
-    page-break-after: avoid; } }

@@ -1,7 +1,322 @@
+// Bourbon Mixin Library (http://bourbon.io)
 @import "lib/bourbon/bourbon";
+
+
+// CSS Reset Alternative (http://necolas.github.io/normalize.css/)
 @import "lib/normalize";
 
-@import "global/mixins";
-@import "global/base";
 
-@import "global/print";
+// Font Stack / Size Variables
+$sans: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$fs-base: 17;
+$fs-small: golden-ratio( $fs-base, -1 );
+$fs-big: golden-ratio( $fs-base, 1 );
+$fs-huge: golden-ratio( $fs-base, 2 );
+
+
+// Colors
+$white: #FFF;
+$light-gray: #EAEAEA;
+$gray: #777;
+$black: #333;
+
+
+// Em-based Breakpoint Variables
+$small: 20em; // includes iPhone portrait
+$medium: 48em; // includes iPad portrait
+$large: 64em; // includes iPad landscape
+
+
+// Media Query Mixin (http://jakearchibald.github.io/sass-ie/)
+$fix-mqs: false !default;
+@mixin mq-min($width) {
+  @if $fix-mqs {
+    @if $fix-mqs >= $width {
+      @content;
+    }
+  }
+  @else {
+    @media screen and (min-width: $width) {
+      @content;
+    }
+  }
+}
+
+
+// REM Font Size Mixin Setup
+html {
+  font-size: 62.5%;
+}
+@mixin font-size ( $size: $fs-base ) {
+  font-size: $size + px;
+  font-size: $size/10 + rem;
+}
+
+
+// list reset mixin
+@mixin reset-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+
+// Box-Sizing
+*,
+*:before,
+*:after {
+  @include box-sizing(border-box);
+}
+
+
+// Typography / Colors
+body {
+  background: $white;
+  color: $black;
+  font-family: $sans;
+  font-weight: 300;
+  line-height: golden-ratio(1,  1);;
+  text-rendering: optimizeLegibility;
+}
+
+
+// Container Layout
+.page-wrapper {
+  @include clearfix;
+  @include font-size( $fs-base );
+  margin: golden-ratio(4em, 1) 0 4em;
+  padding: 0 1em;
+
+  @include mq-min($medium) {
+    margin: 0 0 0 golden-ratio(38.1953%, -2);
+    padding: golden-ratio(4em, 1) 0 4em;
+    position: relative;
+    width: golden-ratio(100%, -1);
+
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      height: 100%;
+      left: -2em;
+      width: 1em;
+      border-left: 1em double lighten($light-gray, 2%);
+    }
+  }
+}
+
+
+// Links
+a {
+  text-decoration: none;
+
+  &:link,
+  &:visited {
+    border-bottom: 1px solid $black;
+    color: $black;
+  }
+
+  &:focus,
+  &:hover,
+  &:active {
+    border-bottom: 3px double $black;
+  }
+
+  .indicator {
+    display: none;
+  }
+}
+
+
+// Block Link Style Mixin
+@mixin blockLink {
+  &,
+  &:link,
+  &:visited {
+    background: $light-gray;
+    border: none;
+    color: $black;
+    display: inline-block;
+    line-height: 1;
+    padding: golden-ratio(0.25em, 1) golden-ratio(0.25em, 1) 0.25em;
+  }
+
+  &:focus,
+  &:hover,
+  &:active {
+    background: darken($light-gray, 10%);
+  }
+}
+
+
+// headings
+h1,
+h2,
+h3 {
+  color: $black;
+  display: block;
+  font-weight: bold;
+  line-height: 1;
+  margin: golden-ratio(1em, 2) 0 1em;
+}
+h1 {
+  @include font-size( $fs-huge );
+  font-family: $sans;
+  font-weight: 300;
+  margin-top: 0;
+}
+h2 {
+  @include font-size( $fs-big );
+}
+h3 {
+  @include font-size( $fs-base );
+  text-transform: uppercase;
+}
+
+
+// lists (reset all)
+ul,
+ol {
+  @include reset-list;
+}
+
+
+// Subtext Style Mixin
+@mixin subtext {
+  @include font-size($fs-small);
+  border-top: 0.6em double $light-gray;
+  color: $gray;
+  display: inline-block;
+  letter-spacing: 1px;
+  padding: 0.25em 0;
+  margin: 0;
+  text-transform: uppercase;
+
+  a:link,
+  a:visited {
+    border-color: lighten($gray, 20%);
+    color: $gray;
+  }
+
+  a:focus,
+  a:hover,
+  a:active {
+    border-color: lighten($gray, 20%);
+  }
+
+  .indicator {
+    display: none;
+  }
+}
+.summary p:last-child,
+[role="contentinfo"] {
+  @include subtext;
+}
+
+
+// Title attributes (useless to touch devices)
+abbr[title] {
+  border: none;
+  cursor: help;
+}
+
+
+// Footer content / Helper text
+footer {
+
+  &:before {
+    @extend h3;
+    content: "This Design:";
+  }
+
+  a {
+    @include blockLink;
+    margin-bottom: 0.25em;
+
+    &.zen-validate-html:before,
+    &.zen-validate-css:before {
+      content: "Validate "
+    }
+    &.zen-license:after {
+      content: " License";
+    }
+    &.zen-accessibility:after {
+      content: " (FAQ)";
+    }
+    &.zen-github:before {
+      content: "Fork via ";
+    }
+  }
+}
+
+
+// Sidebar Styles / Helper Text
+.sidebar {
+  @include clearfix;
+
+  &:before {
+    @extend h2;
+    content: "More from the CSS Zen Garden";
+  }
+}
+
+
+// Design Selection Component
+.design-selection {
+
+  @include mq-min($large) {
+    float: left;
+    width: 50%;
+  }
+
+  li {
+    @include subtext;
+    border: none;
+    display: block;
+  }
+
+  a:first-child {
+    @include font-size($fs-base);
+    @include blockLink;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+}
+
+
+// Archives & Resources
+.design-archives,
+.zen-resources {
+
+  @include mq-min($small) {
+    float: right;
+    padding-right: 1em;
+    width: 50%;
+  }
+
+  li {
+    display: inline-block;
+    margin: 0 0 0.25em;
+  }
+
+  a {
+    @include blockLink;
+  }
+}
+
+
+// Selection (Remove text-shadow, customize the background)
+::-moz-selection {
+  background: $light-gray;
+  text-shadow: none;
+}
+::selection {
+  background: $light-gray;
+  text-shadow: none;
+}
